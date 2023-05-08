@@ -19,7 +19,7 @@ function Form() {
   const addData = async (e) => {
     e.preventDefault();
     const { name, email } = inputValue;
-    const res = await fetch("https://localhost:5001", {
+    const res = await fetch("https://joetechoffical.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
