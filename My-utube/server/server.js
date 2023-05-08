@@ -4,18 +4,20 @@ const bodyParser = require("body-parser");
 const connectDB = require("./server/database/connections");
 const path = require("path");
 const fs = require("fs");
-const cors = require("cors");
 const morgan = require("morgan");
 const notFound = require("./middleware/not-found");
 const errHandler = require("./middleware/error-handler");
 require("dotenv").config();
+const cors = require("cors");
 
 const app = express();
 
+// app.corsoptions("*", cors());
 const corsOptions = {
-  origin: "https://cra.link/deployment", // frontend URI (ReactJS)
+  origin: "htps://ojimaojo.onrender.com' ", // frontend URI (ReactJS)
 };
-app.options("*", cors());
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
