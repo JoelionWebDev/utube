@@ -14,7 +14,7 @@ const app = express();
 
 // app.corsoptions("*", cors());
 const corsOptions = {
-  origin: "htps://ojimaojo.onrender.com' ", // frontend URI (ReactJS)
+  origin: "https://ojimaojo.onrender.com/' ", // frontend URI (ReactJS)
 };
 
 app.use(cors(corsOptions));
