@@ -1,0 +1,108 @@
+.formBody {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--clr-green-dark);
+  width: 100%;
+}
+
+.form {
+  background-color: rgb(5, 5, 50);
+  padding: 2rem 0rem 2rem 0rem;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.form > div input {
+  margin-left: 1rem;
+  padding: 1rem;
+  width: 25rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.form button {
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: rgb(11, 11, 11);
+}
+
+.form h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .form h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+  }
+  .form > div input {
+    width: 15rem;
+  }
+  .form button {
+    width: 10rem;
+  }
+}
+@media (max-width: 1000px) {
+  .form h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .form > div input {
+    width: 25rem;
+  }
+  .form button {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form h2 {
+    font-size: 2.5rem;
+  }
+  .form > div input {
+    width: 26rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  .form button {
+    width: 15rem;
+    border: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+/* @media (max-width: 800px) {
+  .form h2 {
+    font-size: 1.5rem !important;
+  }
+} */
+@media (max-width: 450px) {
+  .form > div input {
+    width: 18rem;
+  }
+  .form button {
+    width: 12rem;
+  }
+}
+@media (max-width: 300px) {
+  .form > div input {
+    width: 7rem;
+  }
+  .form button {
+    width: 5rem;
+  }
+  .bgfollow h2 {
+    font-size: 1rem;
+  }
+}

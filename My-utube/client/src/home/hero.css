@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+}
+
+.iconn {
+  padding-left: 1rem;
+  color: red;
+}
+.iconn:hover {
+  color: rgb(66, 66, 158);
+}
+@media (max-width: 300px) {
+  .iconn {
+    font-size: 0.8rem;
+  }
+}
