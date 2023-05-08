@@ -12,7 +12,9 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://cra.link/deployment", // frontend URI (ReactJS)
+};
 app.options("*", cors());
 
 app.use(express.json());
