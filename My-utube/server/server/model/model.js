@@ -11,17 +11,17 @@ const TskSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    // match: /.+\@.+\..+/,
-    // unique: true,
+    match: /.+\@.+\..+/,
+    unique: true,
   },
   // age: {
   //   type: Number,
   //   required: true,
   // },
-  // mobile: {
-  //   type: String,
-  //   required: true,
-  // },
+  mobile: {
+    type: String,
+    // required: true,
+  },
   // work: {
   //   type: String,
   //   required: true,

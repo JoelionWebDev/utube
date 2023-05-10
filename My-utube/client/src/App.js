@@ -9,6 +9,7 @@ import EBook from "./pages/eBook";
 import Login from "./pages/Login";
 import Blogs from "./pages/Blogs";
 import Guide from "./pages/guide";
+import Success from "./pages/success";
 import NoPage from "./pages/NoPage";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="Courses" element={<Courses />} />
         <Route path="Login" element={<Login />} />
         <Route path="Guide" element={<Guide />} />
+        <Route path="success" element={<Success />} />
         <Route path="eBook" element={<EBook />} />
 
         <Route path="*" element={<NoPage />} />

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./form.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Form() {
-  const [inputValue, setInputValue] = useState({
-    email: "",
-  });
+  const [inputValue, setInputValue] = useState("");
+  const navigate = useNavigate();
   const setdata = (e) => {
+    setInputValue(e.target.value);
     const { name, value } = e.target;
 
     setInputValue((newInput) => {
@@ -14,12 +15,14 @@ function Form() {
         [name]: value,
       };
     });
+    setInputValue("");
   };
 
   const addData = async (e) => {
     e.preventDefault();
-    const { name, email } = inputValue;
-    const res = await fetch("/register", {
+
+    const { email } = inputValue;
+    const res = await fetch("https://joetechoffical.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,8 +37,7 @@ function Form() {
       alert("error");
       console.log("error");
     } else {
-      alert("data added");
-      console.log("data added");
+      navigate("/success");
     }
   };
 

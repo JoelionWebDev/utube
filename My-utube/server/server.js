@@ -7,20 +7,19 @@ const fs = require("fs");
 const morgan = require("morgan");
 const notFound = require("./middleware/not-found");
 const errHandler = require("./middleware/error-handler");
-require("dotenv").config();
-const cors = require("cors");
 
 const app = express();
+const cors = require("cors");
+require("dotenv").config();
 
 // app.corsoptions("*", cors());
 const corsOptions = {
   origin: "https://ojimaojo.onrender.com/' ", // frontend URI (ReactJS)
 };
 
-app.use(cors(corsOptions));
-
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors(corsOptions));
 
 //init view engine
 //app.set("view engine", "ejs");

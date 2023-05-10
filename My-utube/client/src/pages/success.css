@@ -1,0 +1,16 @@
+.success {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.success h2 {
+  color: green;
+  padding-bottom: 3rem;
+}
+
+.success .navl {
+  background-color: rgb(153, 154, 155);
+}
