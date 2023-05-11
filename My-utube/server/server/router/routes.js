@@ -10,7 +10,7 @@ const {
 } = require("../../controller/controller");
 
 router.route("/getdata").get(getAllTask);
-router.route("/register", cors(corsOptions)).post(createTask);
+router.route("/register").post(createTask);
 router.route("/getdata/:id").get(getTask);
 router.route("/update/:id").patch(updateTask);
 router.route("/delete/:id").delete(deleteTask);
