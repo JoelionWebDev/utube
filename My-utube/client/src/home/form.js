@@ -1,21 +1,18 @@
 import React, { useState } from "react";
 import "./form.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState({ email: "" });
   const navigate = useNavigate();
   const setdata = (e) => {
-    setInputValue(e.target.value);
     const { name, value } = e.target;
-
     setInputValue((newInput) => {
       return {
         ...newInput,
         [name]: value,
       };
     });
-    setInputValue("");
   };
 
   const addData = async (e) => {
@@ -24,6 +21,8 @@ function Form() {
     const { email } = inputValue;
     const res = await fetch("https://joetechoffical.onrender.com/register", {
       method: "POST",
+      // mode: "no-cors",
+      // credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
@@ -34,10 +33,15 @@ function Form() {
     const data = await res.json();
 
     if (res.status === 404 || !data) {
-      alert("error");
+      navigate("/guide");
       console.log("error");
     } else {
-      navigate("/success");
+      // navigate("/success");
+      if (res.status === 500) {
+        navigate("/blogs");
+      } else {
+        navigate("/success");
+      }
     }
   };
 
