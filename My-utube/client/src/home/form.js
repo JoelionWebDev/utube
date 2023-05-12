@@ -33,12 +33,11 @@ function Form() {
     const data = await res.json();
 
     if (res.status === 404 || !data) {
-      navigate("/guide");
-      console.log("error");
+      console.log("error, page not found");
     } else {
       // navigate("/success");
       if (res.status === 500) {
-        navigate("/blogs");
+        navigate("/duplicate");
       } else {
         navigate("/success");
       }

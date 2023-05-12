@@ -11,6 +11,7 @@ import Blogs from "./pages/Blogs";
 import Guide from "./pages/guide";
 import Success from "./pages/success";
 import NoPage from "./pages/NoPage";
+import Duplicate from "./pages/duplicate";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="Guide" element={<Guide />} />
         <Route path="success" element={<Success />} />
         <Route path="eBook" element={<EBook />} />
+        <Route path="duplicate" element={<Duplicate />} />
 
         <Route path="*" element={<NoPage />} />
       </Routes>
